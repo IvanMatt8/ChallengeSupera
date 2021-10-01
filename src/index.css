@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,7 +19,6 @@ code {
 }
 
 #root {
-  font-size: 60%;
   --white: #fff7f1;
   --green: #01af67;
   --orange: #ff6b01;
@@ -21,6 +27,12 @@ code {
   --yellow-300: #fdcf56;
   --yellow-400: #fdbc0b;
   --yellow-500: #fdc01c;
+  --yellow-600: radial-gradient(
+      56.5% 56.5% at 50% 9%,
+      #ff6b01 0%,
+      rgba(255, 235, 193, 0) 100%
+    ),
+    #ffcaa4;
   --violet-100: #717195;
   --violet-200: #45409c;
   --grey-100: #96a7af;
