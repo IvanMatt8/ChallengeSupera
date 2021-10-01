@@ -5,6 +5,11 @@
   vertical-align: baseline;
   list-style: none;
   border: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 body {
@@ -33,6 +38,13 @@ code {
       rgba(255, 235, 193, 0) 100%
     ),
     #ffcaa4;
+  --yellow-700: radial-gradient(
+      90.17% 90.17% at 50% 9.83%,
+      rgba(255, 107, 1, 0.21) 0%,
+      #fdbc0b 44.79%,
+      rgba(255, 235, 193, 0) 100%
+    ),
+    #fdcf56;
   --violet-100: #717195;
   --violet-200: #45409c;
   --grey-100: #96a7af;
@@ -51,6 +63,7 @@ code {
   --spacing-xl5: 8rem;
   --spacing-xl6: 9.6rem;
   --spacing-xl7: 12.6rem;
+  --spacing-xl8: 17.5rem;
   --padding-xs: 0.4rem;
   --padding-sm: 0.8rem;
   --padding-md: 1.6rem;
@@ -71,6 +84,7 @@ code {
   --size-xl5: 8rem;
   --size-xl6: 9.6rem;
   --size-xl7: 12.6rem;
+  --size-xl8: 20.6rem;
   --radii-xs: 0.4rem;
   --radii-sm: 0.8rem;
   --radii-md: 1.6rem;
