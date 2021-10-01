@@ -10,3 +10,71 @@ body {
 code {
   font-family: "Roboto", sans-serif;
 }
+
+#root {
+  font-size: 60%;
+  --white: #fff7f1;
+  --green: #01af67;
+  --orange: #ff6b01;
+  --yellow-100: #ffebc1;
+  --yellow-200: #fed78e;
+  --yellow-300: #fdcf56;
+  --yellow-400: #fdbc0b;
+  --yellow-500: #fdc01c;
+  --violet-100: #717195;
+  --violet-200: #45409c;
+  --grey-100: #96a7af;
+  --grey-200: #475e69;
+  --grey-300: #30444e;
+  --spacing-xs: 0.4rem;
+  --spacing-sm: 0.8rem;
+  --spacing-md: 1.6rem;
+  --spacing-lg: 2.4rem;
+  --spacing-xl: 3.2rem;
+  --spacing-xxl: 4rem;
+  --spacing-xl1: 4.8rem;
+  --spacing-xl2: 5.6rem;
+  --spacing-xl3: 6.4rem;
+  --spacing-xl4: 7.2rem;
+  --spacing-xl5: 8rem;
+  --spacing-xl6: 9.6rem;
+  --spacing-xl7: 12.6rem;
+  --padding-xs: 0.4rem;
+  --padding-sm: 0.8rem;
+  --padding-md: 1.6rem;
+  --padding-lg: 2.4rem;
+  --padding-xl: 3.2rem;
+  --padding-xxl: 4rem;
+  --padding-xl1: 4.8rem;
+  --size-xs: 0.4rem;
+  --size-sm: 0.8rem;
+  --size-md: 1.6rem;
+  --size-lg: 2.4rem;
+  --size-xl: 3.2rem;
+  --size-xxl: 4rem;
+  --size-xl1: 4.8rem;
+  --size-xl2: 5.6rem;
+  --size-xl3: 6.4rem;
+  --size-xl4: 7.2rem;
+  --size-xl5: 8rem;
+  --size-xl6: 9.6rem;
+  --size-xl7: 12.6rem;
+  --radii-xs: 0.4rem;
+  --radii-sm: 0.8rem;
+  --radii-md: 1.6rem;
+  --radii-lg: 2.4rem;
+  --radii-xl: 3.2rem;
+  --radii-xxl: 4rem;
+  --radii-xl1: 4.8rem;
+  --radii-full: 50%;
+  --breakpoint-mobile: 37.5rem;
+  --breakpoint-tablet: 76.8rem;
+  --breakpoint-desktop: 115.2rem;
+  --current-breakpoint: var(--breakpoint-desktop);
+  @media (max-width: 76.8rem) {
+    --current-breakpoint: var(--breakpoint-tablet);
+  }
+  @media (max-width: 37.5rem) {
+    --current-breakpoint: var(--breakpoint-mobile);
+  }
+}
