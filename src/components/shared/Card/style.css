@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  background: var(--white);
+  border-radius: var(--size-lg);
+  justify-content: space-around;
+  color: var(--violet-200);
+  margin-top: var(--spacing-xl);
+}
+
+.card .carrinhoCard {
+  margin-top: var(--spacing-sm);
+  margin-left: var(--spacing-xl7);
+}
+.card h3 {
+  margin: var(--spacing-md);
+}
+.card span {
+  color: var(--violet-200);
+}
+.card img {
+  width: var(--spacing-xl5);
+  height: var(--size-xl5);
+}
+
+.wrapperLogoIcone {
+  display: flex;
+}
+
+.wrapperLogoCarrinho {
+  display: flex;
+}
+.wrapperLogoCarrinho .IconesFilterCarrinho {
+  width: 80px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--size-xs);
+}
+
+.wrapperLogoCarrinho span {
+  margin: var(--spacing-sm);
+}
