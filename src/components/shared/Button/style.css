@@ -1,0 +1,5 @@
+.buttonComponet {
+  background: var(--yellow-200);
+  border-radius: var(--size-sm);
+  height: var(--size-xl1);
+}
