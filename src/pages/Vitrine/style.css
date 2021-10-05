@@ -1,0 +1,25 @@
+@media (max-width: 76.8rem) {
+  .wrapperCard {
+    --columns: 2;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .wrapperCard {
+    --columns: 1;
+  }
+}
+
+@media (min-width: 60.9rem) {
+  .wrapperCard {
+    --columns: 3;
+  }
+}
+.wrapperCard {
+  display: grid;
+  width: 100%;
+  margin-left: 20px;
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-md);
+  grid-template-columns: repeat(var(--columns), 1fr);
+}
