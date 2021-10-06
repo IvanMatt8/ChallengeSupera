@@ -2,33 +2,33 @@ import React from "react";
 import "./style.css";
 import DefaultLayout from "../../components/layout/DefaultLayout";
 import Button from "../../components/shared/Button";
-import CardCarrinho from "../../components/layout/CardCarrinho";
-
+import Card from "../../components/shared/Card";
+import { useStoreContent } from "../../hooks/useProducts";
 function Carrinho() {
+  const { productsSelected, sumTotalProducts } = useStoreContent();
+  const { sum, frete, total } = sumTotalProducts();
+
   return (
     <DefaultLayout title="Carrinho">
       <div className="wrappercardCarrinho">
-        <CardCarrinho />
-        <CardCarrinho />
-        <CardCarrinho />
-        <CardCarrinho />
-        <CardCarrinho />
-        <CardCarrinho />
+        {productsSelected.map((product, key) => (
+          <Card {...product} key={key} isCart />
+        ))}
       </div>
       <div className="summer">
         <h3>Resumo do Pedido</h3>
         <div className="productFreight">
-          <p>6 produtos</p>
-          <p>R$ 1.700</p>
+          <p>{Object.keys(productsSelected).length} produtos</p>
+          <p>{sum}</p>
         </div>
         <div className="productFreight">
           <p>Frete</p>
-          <p>Gratis</p>
+          <p>{frete}</p>
         </div>
         <div className="lineProduct" />
         <div className="productFreight">
           <h3>Total</h3>
-          <h3>R$ 1.700</h3>
+          <h3>{total}</h3>
         </div>
 
         <Button
