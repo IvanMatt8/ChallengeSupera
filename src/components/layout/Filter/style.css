@@ -1,0 +1,47 @@
+.wrapperFilter {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 250px;
+  height: 0;
+  top: 100%;
+  background: var(--yellow-100);
+  z-index: 999990;
+  gap: var(--size-xl4);
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 200ms;
+  box-shadow: 0 8px 16px #0003;
+  border-radius: 10px;
+}
+.wrapperFilterButtons {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: var(--size-sm);
+  padding: var(--padding-sm);
+}
+.wrapperFilterButtons h1 {
+  text-align: center;
+  font-size: var(--size-md);
+}
+
+.wrapperFilterButtons a {
+  font-size: var(--size-sm);
+  padding: var(--padding-xs);
+  border-radius: 0;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.wrapperFilterButtons a:not(:last-child) {
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.activeFilter {
+  opacity: 1;
+  pointer-events: initial;
+  height: 250px;
+}
