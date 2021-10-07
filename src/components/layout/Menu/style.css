@@ -1,0 +1,48 @@
+.wrapperMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  background: #212121;
+  z-index: 999990;
+  gap: var(--size-xl4);
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 200ms;
+}
+
+.wrapperMenu button {
+  display: flex;
+  align-self: flex-end;
+  margin: var(--size-lg);
+  color: white !important;
+}
+
+.wrapperMenu h1 {
+  color: white;
+  margin-top: var(--size-lg);
+}
+
+.wrapperMenu div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.closeIcon {
+  color: white;
+}
+
+.closeIcon path {
+  stroke: #fff;
+}
+
+.activeMenu {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: initial;
+}
