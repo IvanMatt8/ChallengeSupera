@@ -18,8 +18,8 @@
 .wrapperCard {
   display: grid;
   width: 100%;
-  margin-left: 20px;
   gap: var(--spacing-md);
   padding: 0 var(--spacing-md);
   grid-template-columns: repeat(var(--columns), 1fr);
+  justify-items: center;
 }
