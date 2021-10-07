@@ -42,16 +42,18 @@
   top: calc(51px + 18px + var(--padding-md));
   left: 50%;
   transform: translateX(-50%);
+  transition: all 200ms;
 }
 
 .wrapperContent {
   display: flex;
   flex-direction: column;
   padding-bottom: var(--padding-md);
-  margin-top: 43px;
+  margin-top: var(--spacing-xl);
   overflow-y: scroll;
   z-index: 1;
-  border-top-left-radius: var(--size-xl);
+  width: 100%;
+  gap: var(--spacing-md);
 }
 .wrapperContent .wrappercardCarrinho {
   display: grid;
@@ -60,10 +62,6 @@
 .wrapperContent::-webkit-scrollbar {
   display: none;
 }
-/* .wrapperContent::-webkit-scrollbar-thumb {
-  background-color: #475e6970;
-  border-radius: 10px;
-} */
 
 .wrapperChildren {
   display: grid;
@@ -71,12 +69,15 @@
 }
 
 header {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
+  top: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   z-index: 99999;
+  transform: translateY(25%);
 }
 
 ul {
@@ -84,11 +85,45 @@ ul {
 }
 
 li {
+  font-size: var(--size-md);
+  font-weight: "500";
   margin: var(--spacing-sm);
 }
 
 span {
   margin-top: var(--spacing-sm);
+}
+
+.wrapperIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+.wrapperIcons .wrapperIconCart {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 4px solid #fff7f1;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.wrapperIcons .wrapperIconCart .budgetNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  background: #fdc01c;
+  border-radius: 99px;
+  width: 18px;
+  height: 18px;
+}
+
+.buttonFilter {
+  position: relative;
 }
 
 @media (max-width: 45.5rem) {
@@ -100,18 +135,22 @@ span {
     display: none;
   }
 
-  .wrapperLogoCarrinho .IconesFilterCarrinho {
+  .wrapperLogoCarrinho .wrapperIcons {
     width: var(--spacing-xxl);
     display: flex;
     margin-top: var(--spacing-sm);
     justify-content: space-between;
   }
 
-  .wrapperLogoIcone .logoIcone {
-    width: var(--spacing-xxl);
+  .wrapperLogoIcone {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    flex-direction: row;
+  }
+  .wrapperLogoIcone .logoIcone {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-md);
   }
   .wrapperDefaultLayout {
     padding: 0;
