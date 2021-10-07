@@ -22,6 +22,20 @@ code {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: #000;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
 #root {
   --white: #fff7f1;
   --green: #01af67;
@@ -49,6 +63,7 @@ code {
   --grey-100: #96a7af;
   --grey-200: #475e69;
   --grey-300: #30444e;
+  --grey-400: #717195;
   --spacing-xs: 0.4rem;
   --spacing-sm: 0.8rem;
   --spacing-md: 1.6rem;
