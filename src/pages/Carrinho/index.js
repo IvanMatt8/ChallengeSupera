@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import DefaultLayout from "../../components/layout/DefaultLayout";
 import Button from "../../components/shared/Button";
 import Card from "../../components/shared/Card";
 import { useStoreContent } from "../../hooks/useProducts";
+import Modal from "react-modal";
+import { Link } from "react-router-dom";
+
 function Carrinho() {
-  const { productsSelected, sumTotalProducts } = useStoreContent();
+  const { productsSelected, sumTotalProducts, setProductsSelected } =
+    useStoreContent();
+  const [isOpen, setIsOpen] = useState(false);
   const { sum, frete, total } = sumTotalProducts();
+
+  function toggleModal() {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <DefaultLayout title="Carrinho">
@@ -32,12 +41,43 @@ function Carrinho() {
         </div>
 
         <Button
-          onClick={() => console.log("eAI")}
+          onClick={toggleModal}
           width={"50%"}
           style={{ alignSelf: "center" }}
         >
           Confirmar
         </Button>
+
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={toggleModal}
+          contentLabel="My dialog"
+          className="mymodal"
+          overlayClassName="myoverlay"
+          closeTimeoutMS={500}
+        >
+          <h1>Compra Efetuada Com Sucesso!</h1>
+          <p>
+            Obrigado Volte Sempre! Entre Em contato com{" "}
+            <span>
+              <a href="https://www.supera.com.br/">
+                Supera Inovacao em Tecnologia
+              </a>
+            </span>{" "}
+            para Mais informacao da sua Compra.
+          </p>
+          <button
+            className="backVitrine"
+            onClick={() => {
+              toggleModal();
+              setProductsSelected([]);
+            }}
+          >
+            <Link to="/">
+              <h3>Volte a Vitrine</h3>
+            </Link>
+          </button>
+        </Modal>
       </div>
     </DefaultLayout>
   );
